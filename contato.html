@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contato - Seus Materiais de Estudo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Contato</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="historia.html">História</a>
+      <a href="sociologia.html">Sociologia</a>
+      <a href="socioemocional.html">Educação Socioemocional</a>
+      <a href="redes.html">Redes Sociais</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <form id="contactForm">
+        <label for="name">Nome:</label><br />
+        <input type="text" id="name" name="name" required /><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required /><br />
+
+        <label for="message">Mensagem:</label><br />
+        <textarea id="message" name="message" rows="4" required></textarea><br />
+
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+
+      <div id="formResponse"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Seus Materiais de Estudo - Todos os direitos reservados.</p>
+  </footer>
+
+<script>
+  const form = document.getElementById('contactForm');
+  const responseDiv = document.getElementById('formResponse');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault(); // Impede o envio real do formulário
+    responseDiv.textContent = 'Obrigado pelo contato! Responderei em breve.';
+    form.reset(); // Limpa o formulário
+  });
+</script>
+</body>
+</html>

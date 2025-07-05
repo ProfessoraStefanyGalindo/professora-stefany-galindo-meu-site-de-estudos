@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Educação Socioemocional - Seus Materiais de Estudo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://sdk.mercadopago.com/js/v2"></script>
+</head>
+<body>
+  <header>
+    <h1>Educação Socioemocional</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="historia.html">História</a>
+      <a href="sociologia.html">Sociologia</a>
+      <a href="contato.html">Contato</a>
+      <a href="redes.html">Redes Sociais</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Material de Educação Socioemocional</h2>
+      <p>Confira o material completo e adquira para seus estudos!</p>
+      <p><strong>Valor: R$ 60,00</strong></p>
+      <button id="buyButtonSocioemocional" class="btn">Comprar Material Educação Socioemocional</button>
+
+      <div id="paymentStatus"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Seus Materiais de Estudo - Todos os direitos reservados.</p>
+  </footer>
+
+<script>
+  const mp = new MercadoPago('SEU_PUBLIC_KEY_AQUI', {locale: 'pt-BR'});
+
+  const buyBtn = document.getElementById('buyButtonSocioemocional');
+
+  buyBtn.addEventListener('click', () => {
+    alert('Para integrar pagamentos reais (boleto, pix, cartão), você precisa de um backend para criar a preferência de pagamento com o Mercado Pago e então gerar o checkout.');
+  });
+</script>
+
+</body>
+</html>

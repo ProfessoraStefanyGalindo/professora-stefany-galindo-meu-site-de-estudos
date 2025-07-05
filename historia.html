@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>História - Seus Materiais de Estudo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://sdk.mercadopago.com/js/v2"></script>
+</head>
+<body>
+  <header>
+    <h1>História</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="sociologia.html">Sociologia</a>
+      <a href="socioemocional.html">Educação Socioemocional</a>
+      <a href="contato.html">Contato</a>
+      <a href="redes.html">Redes Sociais</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Material de História</h2>
+      <p>Confira o material completo e adquira para seus estudos!</p>
+      <p><strong>Valor: R$ 50,00</strong></p>
+      <button id="buyButtonHistoria" class="btn">Comprar Material História</button>
+
+      <div id="paymentStatus"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Seus Materiais de Estudo - Todos os direitos reservados.</p>
+  </footer>
+
+<script>
+  // Este é um placeholder. Para integração real, você precisará de:
+  // 1. Sua Public Key do Mercado Pago.
+  // 2. Um backend para criar a preferência de pagamento.
+  const mp = new MercadoPago('SEU_PUBLIC_KEY_AQUI', {locale: 'pt-BR'});
+
+  const buyBtn = document.getElementById('buyButtonHistoria');
+
+  buyBtn.addEventListener('click', () => {
+    alert('Para integrar pagamentos reais (boleto, pix, cartão), você precisa de um backend para criar a preferência de pagamento com o Mercado Pago e então gerar o checkout.');
+    // Exemplo de como seria o fluxo com um backend:
+    /*
+    fetch('/create_preference', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ item: 'Material de História', price: 50.00 }),
+    })
+    .then(response => response.json())
+    .then(preference => {
+      const checkout = mp.checkout({
+        preference: {
+          id: preference.id
+        },
+        render: {
+          container: '#paymentStatus', // Renderiza o checkout em uma div
+          label: 'Pagar',
+        }
+      });
+    })
+    .catch(error => {
+      console.error('Erro ao criar preferência de pagamento:', error);
+      document.getElementById('paymentStatus').innerText = 'Erro ao iniciar pagamento.';
+    });
+    */
+  });
+</script>
+
+</body>
+</html>
